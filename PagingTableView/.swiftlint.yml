@@ -1,0 +1,25 @@
+excluded: 
+  - Pods
+disabled_rules: # rule identifiers to exclude from running
+  - line_length
+  - function_body_length
+  - cyclomatic_complexity
+  - multiple_closures_with_trailing_closure
+  - xctfail_message
+identifier_name:
+  min_length:
+    warning: 1
+    error: 1
+  max_length:
+    warning: 60
+    error: 80
+type_name:
+  max_length:
+    warning: 60
+    error: 100
+type_body_length:
+  warning: 300
+  error: 400
+file_length:
+  warning: 700
+  error: 800
