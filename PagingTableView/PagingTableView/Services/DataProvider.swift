@@ -6,10 +6,13 @@
 //  Copyright © 2018 Diego Caridei. All rights reserved.
 //
 import Foundation
+
 class DataProvider {
+    
     static func fetchNews(with elementToSearch: String, page: Int, completition:@escaping(([ArticleViewModel]) -> Void)) {
         var articlesViewModel = [ArticleViewModel]()
         APINews.shared.getNews(with: elementToSearch, page: page) { (result) in
+            print("Result : ", result)
             switch result {
             case .success(let news):
                 (news.articles).forEach({ (article) in
@@ -21,4 +24,5 @@ class DataProvider {
             }
         }
     }
+    
 }
